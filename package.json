@@ -1,0 +1,19 @@
+{
+  "name": "arachnae-native",
+  "version": "0.0.1",
+  "description": "Archane for React Native",
+  "main": "index.js",
+  "scripts": {
+    "flow": "flow",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-native": "^0.65.1"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.159.0"
+  }
+}
