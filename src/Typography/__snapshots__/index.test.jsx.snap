@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title renders 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "fontFamily": "arial",
+      },
+      Object {
+        "fontSize": 48,
+        "fontWeight": "bold",
+      },
+      Object {
+        "color": undefined,
+      },
+    ]
+  }
+>
+  My Title
+</Text>
+`;
