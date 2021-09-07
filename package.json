@@ -2,8 +2,9 @@
   "name": "arachnae-native",
   "version": "0.0.1",
   "description": "Archane for React Native",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "webpack",
     "flow": "flow",
     "test": "jest"
   },
@@ -16,10 +17,14 @@
   "devDependencies": {
     "@testing-library/jest-native": "^4.0.2",
     "@testing-library/react-native": "^7.2.0",
+    "babel-loader": "^8.2.2",
     "flow-bin": "^0.159.0",
     "flow-typed": "^3.3.1",
     "jest": "^27.1.0",
+    "metro-react-native-babel-preset": "^0.66.2",
     "react": "^17.0.2",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
   }
 }
