@@ -4,7 +4,9 @@
   "description": "Archane for React Native",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "npm run build:js && npm run build:flow",
+    "build:js": "webpack --mode=production",
+    "build:flow": "flow-copy-source -i **/*.test.js -i **/*.test.jsx src dist",
     "flow": "flow",
     "test": "jest"
   },
@@ -19,6 +21,7 @@
     "@testing-library/react-native": "^7.2.0",
     "babel-loader": "^8.2.2",
     "flow-bin": "^0.159.0",
+    "flow-copy-source": "^2.0.9",
     "flow-typed": "^3.3.1",
     "jest": "^27.1.0",
     "metro-react-native-babel-preset": "^0.66.2",
