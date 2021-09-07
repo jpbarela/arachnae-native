@@ -1,0 +1,27 @@
+name: Arachnae Native Tests
+
+on: push
+
+jobs:
+  js_test:
+    runs-on: ubuntu-latest
+
+    name: Test components
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Install Dependencies
+        run: npm install
+      - name: Type Check
+        run: npm run flow
+      - name: Format
+        run: npm run prettier
+      - name: Test Project
+        uses: paambaati/codeclimate-action@v2.6.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.TEST_REPORTER_ID }}
+        with:
+          coverageCommand: npm run test
