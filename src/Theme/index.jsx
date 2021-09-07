@@ -1,12 +1,18 @@
 // @flow strict-local
 import * as React from "react";
 import { StyleSheet } from "react-native";
+import type { TextStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet";
 
 type ThemeProps = {
   fontFamily: string,
 };
 
-export function createTheme(theme: ThemeProps) {
+type Theme = {
+  textBase: TextStyleProp,
+  textTitle: TextStyleProp,
+};
+
+export function createTheme(theme: ThemeProps): Theme {
   return StyleSheet.create({
     textBase: {
       fontFamily: theme.fontFamily || "arial",
@@ -18,7 +24,9 @@ export function createTheme(theme: ThemeProps) {
   });
 }
 
-export const ThemeContext = React.createContext(createTheme({}));
+export const ThemeContext: React.Context<Theme> = React.createContext(
+  createTheme({})
+);
 
 export function ThemeProvider({
   theme,
@@ -26,7 +34,7 @@ export function ThemeProvider({
 }: {
   theme: ThemeProps,
   children: React.Node,
-}) {
+}): React.Node {
   const themeStyleSheet = createTheme(theme);
 
   return (
