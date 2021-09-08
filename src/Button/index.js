@@ -50,10 +50,7 @@ export function Button({
     <Pressable
       onPress={onPress}
       disabled={disabled}
-      style={[
-        type === "button" ? theme.buttonBase : theme.buttonLink,
-        dynamicButtonStyle,
-      ]}
+      style={[type === "button" ? theme.buttonBase : null, dynamicButtonStyle]}
     >
       <Text
         style={[

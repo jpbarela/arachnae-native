@@ -1,27 +1,38 @@
 // @flow strict-local
 import * as React from "react";
 import { StyleSheet } from "react-native";
-import type { TextStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet";
+import type {
+  TextStyleProp,
+  ViewStyleProp,
+} from "react-native/Libraries/StyleSheet/StyleSheet";
 
 type ThemeProps = {
-  fontFamily: string,
-  primaryColor: string,
+  fontFamily?: string,
+  primaryColor?: string,
 };
 
 type Theme = {
+  buttonBase: ViewStyleProp,
+  buttonLabelLink: TextStyleProp,
   textBase: TextStyleProp,
   textTitle: TextStyleProp,
 };
 
 export function createTheme(theme: ThemeProps): Theme {
   return StyleSheet.create({
-    buttonBase: {},
-    buttonLinkLabel: {
+    buttonBase: {
+      borderColor: theme.primaryColor || "black",
+      borderRadius: 20,
+      borderWidth: 2,
+      padding: 10,
+    },
+    buttonLabelLink: {
       textDecorationLine: "underline",
     },
     textBase: {
-      color: theme.primaryColor,
+      color: theme.primaryColor || "black",
       fontFamily: theme.fontFamily || "arial",
+      fontSize: 28,
     },
     textTitle: {
       fontWeight: "bold",
