@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders with button style 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "borderColor": "black",
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "padding": 10,
+      },
+      Object {},
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "arial",
+          "fontSize": 28,
+        },
+        null,
+        Object {},
+      ]
+    }
+  >
+    Press Me
+  </Text>
+</View>
+`;
+
+exports[`Button renders with link style 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      null,
+      Object {},
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "arial",
+          "fontSize": 28,
+        },
+        Object {
+          "textDecorationLine": "underline",
+        },
+        Object {},
+      ]
+    }
+  >
+    Click Me
+  </Text>
+</View>
+`;
+
+exports[`Button renders with no style 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "borderColor": "black",
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "padding": 10,
+      },
+      Object {},
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "black",
+          "fontFamily": "arial",
+          "fontSize": 28,
+        },
+        null,
+        Object {},
+      ]
+    }
+  >
+    Press Me
+  </Text>
+</View>
+`;
