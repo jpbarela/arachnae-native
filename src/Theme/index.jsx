@@ -5,6 +5,7 @@ import type { TextStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet
 
 type ThemeProps = {
   fontFamily: string,
+  primaryColor: string,
 };
 
 type Theme = {
@@ -14,7 +15,12 @@ type Theme = {
 
 export function createTheme(theme: ThemeProps): Theme {
   return StyleSheet.create({
+    buttonBase: {},
+    buttonLinkLabel: {
+      textDecorationLine: "underline",
+    },
     textBase: {
+      color: theme.primaryColor,
       fontFamily: theme.fontFamily || "arial",
     },
     textTitle: {

@@ -5,15 +5,14 @@ exports[`Title renders 1`] = `
   style={
     Array [
       Object {
+        "color": undefined,
         "fontFamily": "arial",
       },
       Object {
         "fontSize": 48,
         "fontWeight": "bold",
       },
-      Object {
-        "color": undefined,
-      },
+      Object {},
     ]
   }
 >
