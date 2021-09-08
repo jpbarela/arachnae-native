@@ -10,12 +10,12 @@ describe("Button", () => {
   });
 
   it("renders with link style", () => {
-    const container = render(<Button title="Click Me" style="link" />);
+    const container = render(<Button title="Click Me" type="link" />);
     expect(container).toMatchSnapshot();
   });
 
   it("renders with button style", () => {
-    const container = render(<Button title="Press Me" style="button" />);
+    const container = render(<Button title="Press Me" type="button" />);
     expect(container).toMatchSnapshot();
   });
 });

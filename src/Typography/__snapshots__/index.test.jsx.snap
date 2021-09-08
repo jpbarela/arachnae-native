@@ -5,8 +5,9 @@ exports[`Title renders 1`] = `
   style={
     Array [
       Object {
-        "color": undefined,
+        "color": "black",
         "fontFamily": "arial",
+        "fontSize": 28,
       },
       Object {
         "fontSize": 48,

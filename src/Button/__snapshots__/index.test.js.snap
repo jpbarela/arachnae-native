@@ -16,7 +16,12 @@ exports[`Button renders with button style 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Array [
-      Object {},
+      Object {
+        "borderColor": "black",
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "padding": 10,
+      },
       Object {},
     ]
   }
@@ -25,8 +30,9 @@ exports[`Button renders with button style 1`] = `
     style={
       Array [
         Object {
-          "color": undefined,
+          "color": "black",
           "fontFamily": "arial",
+          "fontSize": 28,
         },
         null,
         Object {},
@@ -54,7 +60,7 @@ exports[`Button renders with link style 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Array [
-      Object {},
+      null,
       Object {},
     ]
   }
@@ -63,10 +69,13 @@ exports[`Button renders with link style 1`] = `
     style={
       Array [
         Object {
-          "color": undefined,
+          "color": "black",
           "fontFamily": "arial",
+          "fontSize": 28,
         },
-        null,
+        Object {
+          "textDecorationLine": "underline",
+        },
         Object {},
       ]
     }
@@ -92,7 +101,12 @@ exports[`Button renders with no style 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Array [
-      Object {},
+      Object {
+        "borderColor": "black",
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "padding": 10,
+      },
       Object {},
     ]
   }
@@ -101,8 +115,9 @@ exports[`Button renders with no style 1`] = `
     style={
       Array [
         Object {
-          "color": undefined,
+          "color": "black",
           "fontFamily": "arial",
+          "fontSize": 28,
         },
         null,
         Object {},
