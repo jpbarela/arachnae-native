@@ -5,6 +5,7 @@ import type {
   TextStyleProp,
   ViewStyleProp,
 } from "react-native/Libraries/StyleSheet/StyleSheet";
+import { definedNonEmptyString } from "../utils";
 
 type ThemeProps = {
   backgroundColor?: string,
@@ -21,7 +22,9 @@ type Theme = {
 };
 
 const buttonBase = (theme) => ({
-  borderColor: theme.primaryColor || "black",
+  borderColor: definedNonEmptyString(theme.primaryColor)
+    ? theme.primaryColor
+    : "black",
   borderRadius: 20,
   borderWidth: 2,
   padding: 10,
@@ -32,16 +35,22 @@ const buttonLabelLink = () => ({
 });
 
 const page = (theme) => ({
-  backgroundColor: theme.backgroundColor || "white",
+  backgroundColor: definedNonEmptyString(theme.backgroundColor)
+    ? theme.backgroundColor
+    : "white",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
   height: "100%",
 });
 
-const textBase = (theme) => ({
-  color: theme.primaryColor || "black",
-  fontFamily: theme.fontFamily || "arial",
+const textBase = (theme: ThemeProps) => ({
+  color: definedNonEmptyString(theme.primaryColor)
+    ? theme.primaryColor
+    : "black",
+  fontFamily: definedNonEmptyString(theme.fontFamily)
+    ? theme.fontFamily
+    : "arial",
   fontSize: 28,
 });
 
@@ -53,7 +62,7 @@ const textTitle = (theme) => ({
 export function createTheme(theme: ThemeProps): Theme {
   return StyleSheet.create({
     buttonBase: buttonBase(theme),
-    buttonLabelLink: buttonLabelLink(theme),
+    buttonLabelLink: buttonLabelLink(),
     page: page(theme),
     textBase: textBase(theme),
     textTitle: textTitle(theme),
