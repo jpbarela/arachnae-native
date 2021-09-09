@@ -20,33 +20,43 @@ type Theme = {
   textTitle: TextStyleProp,
 };
 
+const buttonBase = (theme) => ({
+  borderColor: theme.primaryColor || "black",
+  borderRadius: 20,
+  borderWidth: 2,
+  padding: 10,
+});
+
+const buttonLabelLink = () => ({
+  textDecorationLine: "underline",
+});
+
+const page = (theme) => ({
+  backgroundColor: theme.backgroundColor || "white",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  height: "100%",
+});
+
+const textBase = (theme) => ({
+  color: theme.primaryColor || "black",
+  fontFamily: theme.fontFamily || "arial",
+  fontSize: 28,
+});
+
+const textTitle = (theme) => ({
+  fontWeight: "bold",
+  fontSize: 48,
+});
+
 export function createTheme(theme: ThemeProps): Theme {
   return StyleSheet.create({
-    buttonBase: {
-      borderColor: theme.primaryColor || "black",
-      borderRadius: 20,
-      borderWidth: 2,
-      padding: 10,
-    },
-    buttonLabelLink: {
-      textDecorationLine: "underline",
-    },
-    page: {
-      backgroundColor: theme.backgroundColor || "white",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "100%",
-    },
-    textBase: {
-      color: theme.primaryColor || "black",
-      fontFamily: theme.fontFamily || "arial",
-      fontSize: 28,
-    },
-    textTitle: {
-      fontWeight: "bold",
-      fontSize: 48,
-    },
+    buttonBase: buttonBase(theme),
+    buttonLabelLink: buttonLabelLink(theme),
+    page: page(theme),
+    textBase: textBase(theme),
+    textTitle: textTitle(theme),
   });
 }
 
