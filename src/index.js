@@ -1,3 +1,5 @@
-// @flow
-export { ThemeContext, ThemeProvider } from "./Theme";
+// @flow strict-local
+export { Button } from "./Button";
+export { Page } from "./Page";
+export { ThemeProvider, ThemeContext } from "./Theme";
 export { Title } from "./Typography";
