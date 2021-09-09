@@ -1,5 +1,5 @@
 // @flow
-export function removeUndefined(obj: {}): any {
+export function removeUndefined(obj: any): any {
   Object.keys(obj).forEach((key) => obj[key] === undefined && delete obj[key]);
   return obj;
 }

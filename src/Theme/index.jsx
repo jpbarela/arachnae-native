@@ -7,6 +7,7 @@ import type {
 } from "react-native/Libraries/StyleSheet/StyleSheet";
 
 type ThemeProps = {
+  backgroundColor?: string,
   fontFamily?: string,
   primaryColor?: string,
 };
@@ -14,6 +15,7 @@ type ThemeProps = {
 type Theme = {
   buttonBase: ViewStyleProp,
   buttonLabelLink: TextStyleProp,
+  page: ViewStyleProp,
   textBase: TextStyleProp,
   textTitle: TextStyleProp,
 };
@@ -29,6 +31,13 @@ export function createTheme(theme: ThemeProps): Theme {
     buttonLabelLink: {
       textDecorationLine: "underline",
     },
+    page: {
+      backgroundColor: theme.backgroundColor || "white",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100%",
+    },
     textBase: {
       color: theme.primaryColor || "black",
       fontFamily: theme.fontFamily || "arial",
@@ -42,7 +51,7 @@ export function createTheme(theme: ThemeProps): Theme {
 }
 
 export const ThemeContext: React.Context<Theme> = React.createContext(
-  createTheme({})
+  createTheme({ primaryColor: "black" })
 );
 
 export function ThemeProvider({

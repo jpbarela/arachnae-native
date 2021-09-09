@@ -9,15 +9,12 @@ type ButtonProps = {
   disabled?: boolean,
   onPress?: () => void,
   type?: "button" | "link",
-};
-
-export type ButtonStyleProps = {
   color?: string,
-  margin?: string,
-  marginRight?: string,
-  marginLeft?: string,
-  marginTop?: string,
-  marginBottom?: string,
+  margin?: number,
+  marginRight?: number,
+  marginLeft?: number,
+  marginTop?: number,
+  marginBottom?: number,
 };
 
 export function Button({
@@ -31,7 +28,7 @@ export function Button({
   marginRight,
   marginTop,
   type,
-}: ButtonProps & ButtonStyleProps): React.Node {
+}: ButtonProps): React.Node {
   const theme = React.useContext(ThemeContext);
 
   const dynamicLabelStyle = removeUndefined({ color });
