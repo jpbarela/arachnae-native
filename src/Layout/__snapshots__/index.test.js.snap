@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row renders 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "paddingLeft": 30,
+        "paddingRight": 30,
+      },
+      Object {
+        "flex": 1,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+        },
+        Object {
+          "alignItems": "flex-start",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  />
+</View>
+`;

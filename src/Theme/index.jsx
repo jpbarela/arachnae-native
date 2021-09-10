@@ -14,35 +14,10 @@ type ThemeProps = {
 };
 
 type Theme = {
-  buttonBase: ViewStyleProp,
-  buttonLabelLink: TextStyleProp,
-  page: ViewStyleProp,
+  backgroundColor: ViewStyleProp,
+  borderColor: ViewStyleProp,
   textBase: TextStyleProp,
-  textTitle: TextStyleProp,
 };
-
-const buttonBase = (theme) => ({
-  borderColor: definedNonEmptyString(theme.primaryColor)
-    ? theme.primaryColor
-    : "black",
-  borderRadius: 20,
-  borderWidth: 2,
-  padding: 10,
-});
-
-const buttonLabelLink = () => ({
-  textDecorationLine: "underline",
-});
-
-const page = (theme) => ({
-  backgroundColor: definedNonEmptyString(theme.backgroundColor)
-    ? theme.backgroundColor
-    : "white",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  height: "100%",
-});
 
 const textBase = (theme: ThemeProps) => ({
   color: definedNonEmptyString(theme.primaryColor)
@@ -54,18 +29,19 @@ const textBase = (theme: ThemeProps) => ({
   fontSize: 28,
 });
 
-const textTitle = (theme) => ({
-  fontWeight: "bold",
-  fontSize: 48,
-});
-
 export function createTheme(theme: ThemeProps): Theme {
   return StyleSheet.create({
-    buttonBase: buttonBase(theme),
-    buttonLabelLink: buttonLabelLink(),
-    page: page(theme),
+    backgroundColor: {
+      backgroundColor: definedNonEmptyString(theme.backgroundColor)
+        ? theme.backgroundColor
+        : "white",
+    },
+    borderColor: {
+      borderColor: definedNonEmptyString(theme.primaryColor)
+        ? theme.primaryColor
+        : "black",
+    },
     textBase: textBase(theme),
-    textTitle: textTitle(theme),
   });
 }
 

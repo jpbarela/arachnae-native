@@ -3,13 +3,26 @@
 exports[`Page renders 1`] = `
 <View
   style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "white",
-      "flexDirection": "column",
-      "height": "100%",
-      "justifyContent": "center",
-    }
+    Array [
+      Object {
+        "height": "100%",
+        "width": "100%",
+      },
+      Object {
+        "backgroundColor": "white",
+      },
+    ]
   }
-/>
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+      }
+    }
+  />
+</View>
 `;
