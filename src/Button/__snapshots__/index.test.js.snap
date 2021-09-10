@@ -16,12 +16,16 @@ exports[`Button renders with button style 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Array [
-      Object {
-        "borderColor": "black",
-        "borderRadius": 20,
-        "borderWidth": 2,
-        "padding": 10,
-      },
+      Array [
+        Object {
+          "borderRadius": 20,
+          "borderWidth": 2,
+          "padding": 10,
+        },
+        Object {
+          "borderColor": "black",
+        },
+      ],
       Object {},
     ]
   }
@@ -101,12 +105,16 @@ exports[`Button renders with no style 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Array [
-      Object {
-        "borderColor": "black",
-        "borderRadius": 20,
-        "borderWidth": 2,
-        "padding": 10,
-      },
+      Array [
+        Object {
+          "borderRadius": 20,
+          "borderWidth": 2,
+          "padding": 10,
+        },
+        Object {
+          "borderColor": "black",
+        },
+      ],
       Object {},
     ]
   }

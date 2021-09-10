@@ -1,6 +1,6 @@
 // @flow
 import * as React from "react";
-import { Pressable, Text } from "react-native";
+import { Pressable, StyleSheet, Text } from "react-native";
 import { ThemeContext } from "../Theme";
 import { removeUndefined } from "../utils";
 
@@ -43,16 +43,18 @@ export function Button({
     dynamicButtonStyle.borderColor = color;
   }
 
+  const buttonStyles = StyleSheet.compose(styles.buttonBase, theme.borderColor);
+
   return (
     <Pressable
       onPress={onPress}
       disabled={disabled}
-      style={[type === "button" ? theme.buttonBase : null, dynamicButtonStyle]}
+      style={[type === "button" ? buttonStyles : null, dynamicButtonStyle]}
     >
       <Text
         style={[
           theme.textBase,
-          type === "link" ? theme.buttonLabelLink : null,
+          type === "link" ? styles.buttonLabelLink : null,
           dynamicLabelStyle,
         ]}
       >
@@ -65,3 +67,14 @@ export function Button({
 Button.defaultProps = {
   type: "button",
 };
+
+const styles = StyleSheet.create({
+  buttonBase: {
+    borderRadius: 20,
+    borderWidth: 2,
+    padding: 10,
+  },
+  buttonLabelLink: {
+    textDecorationLine: "underline",
+  },
+});

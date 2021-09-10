@@ -1,6 +1,6 @@
 // @flow strict-local
 import * as React from "react";
-import { Text } from "react-native";
+import { StyleSheet, Text } from "react-native";
 import { ThemeContext } from "../Theme";
 import { removeUndefined } from "../utils";
 import type { TextStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet";
@@ -16,8 +16,13 @@ export function Title({ color, children }: TextProps): React.Node {
   const dynamicStyle = removeUndefined({ color });
 
   return (
-    <Text style={[theme.textBase, theme.textTitle, dynamicStyle]}>
-      {children}
-    </Text>
+    <Text style={[theme.textBase, styles.title, dynamicStyle]}>{children}</Text>
   );
 }
+
+const styles = StyleSheet.create({
+  title: {
+    fontWeight: "bold",
+    fontSize: 48,
+  },
+});

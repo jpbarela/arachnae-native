@@ -1,9 +1,14 @@
 // @flow
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
-import type { TextStyleProp } from "react-native/Libraries/StyleSheet/StyleSheet";
+import type {
+  TextStyleProp,
+  ViewStyleProp,
+} from "react-native/Libraries/StyleSheet/StyleSheet";
 
 type RowProps = {
+  alignItems: "flex-start" | "flex-end" | "center" | "stretch" | "baseline",
+  heightFlex: number,
   justifyContent:
     | "flex-start"
     | "flex-end"
@@ -11,17 +16,25 @@ type RowProps = {
     | "space-between"
     | "space-around"
     | "space-evenly",
-  alignItems: "flex-start" | "flex-end" | "center" | "stretch" | "baseline",
+  paddingRight?: number,
   children?: React.Node,
 };
 
 export function Row({
   alignItems,
+  heightFlex,
   justifyContent,
+  paddingRight,
   children,
 }: RowProps): React.Node {
+  const dynamicStyle = paddingRight ? { paddingRight: paddingRight + 30 } : {};
+
   return (
-    <View style={[styles.row, { alignItems, justifyContent }]}>{children}</View>
+    <View style={[styles.rowOuter, { flex: heightFlex }, dynamicStyle]}>
+      <View style={[styles.rowInner, { alignItems, justifyContent }]}>
+        {children}
+      </View>
+    </View>
   );
 }
 
@@ -31,7 +44,13 @@ Row.defaultProps = {
 };
 
 const styles = StyleSheet.create({
-  row: {
+  rowOuter: {
+    flexDirection: "row",
+    paddingLeft: 30,
+    paddingRight: 30,
+  },
+  rowInner: {
     flex: 1,
+    flexDirection: "row",
   },
 });

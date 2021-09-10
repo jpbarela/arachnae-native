@@ -4,7 +4,7 @@ import { render } from "@testing-library/react-native";
 import { Row } from "./index";
 
 test("Row renders", () => {
-  const container = render(<Row />);
+  const container = render(<Row heightFlex={1} />);
 
   expect(container).toMatchSnapshot();
 });
