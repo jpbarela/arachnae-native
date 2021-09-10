@@ -8,7 +8,9 @@ type ButtonProps = {
   title: string,
   disabled?: boolean,
   onPress?: () => void,
-  type?: "button" | "link",
+  type: "button" | "link",
+  backgroundColor?: string,
+  borderColor?: string,
   color?: string,
   margin?: number,
   marginRight?: number,
@@ -21,6 +23,8 @@ export function Button({
   onPress,
   title,
   disabled,
+  backgroundColor,
+  borderColor,
   color,
   margin,
   marginBottom,
@@ -33,15 +37,15 @@ export function Button({
 
   const dynamicLabelStyle = removeUndefined({ color });
   const dynamicButtonStyle = removeUndefined({
+    backgroundColor,
+    borderColor,
+    color,
     margin,
     marginBottom,
     marginLeft,
     marginRight,
     marginTop,
   });
-  if (color) {
-    dynamicButtonStyle.borderColor = color;
-  }
 
   const buttonStyles = StyleSheet.compose(styles.buttonBase, theme.borderColor);
 
