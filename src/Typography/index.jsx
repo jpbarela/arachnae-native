@@ -10,6 +10,14 @@ type TextProps = {
   children?: React.Node,
 };
 
+export function Body({ color, children }: TextProps): React.Node {
+  const theme = React.useContext(ThemeContext);
+
+  const dynamicStyle = removeUndefined({ color });
+
+  return <Text style={[theme.textBase, dynamicStyle]}>{children}</Text>;
+}
+
 export function Title({ color, children }: TextProps): React.Node {
   const theme = React.useContext(ThemeContext);
 
