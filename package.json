@@ -1,13 +1,21 @@
 {
-  "name": "arachnae-native",
-  "version": "0.0.1",
-  "description": "Archane for React Native",
+  "name": "@jpbarela/arachnae-native",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpbarela/arachnae-native.git"
+  },
+  "version": "0.1.1",
+  "description": "Arachnae for React Native",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "npm run build:js && npm run build:flow",
     "build:js": "webpack --mode=production",
     "build:flow": "flow-copy-source -i **/*.test.js -i **/*.test.jsx src dist",
     "flow": "flow",
+    "prepare": "npm run build",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "test": "jest"
