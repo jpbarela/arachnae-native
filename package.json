@@ -4,9 +4,12 @@
     "type": "git",
     "url": "git+https://github.com/jpbarela/arachnae-native.git"
   },
-  "version": "0.1.0a",
+  "version": "0.1.0b",
   "description": "Archane for React Native",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "npm run build:js && npm run build:flow",
     "build:js": "webpack --mode=production",
