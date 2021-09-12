@@ -1,6 +1,10 @@
 {
-  "name": "arachnae-native",
-  "version": "0.0.1",
+  "name": "@jpbarela/arachnae-native",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpbarela/arachnae.git"
+  },
+  "version": "0.1.0",
   "description": "Archane for React Native",
   "main": "dist/index.js",
   "scripts": {
