@@ -4,8 +4,8 @@
     "type": "git",
     "url": "git+https://github.com/jpbarela/arachnae-native.git"
   },
-  "version": "0.1.0d",
-  "description": "Archane for React Native",
+  "version": "0.1.0e",
+  "description": "Arachnae for React Native",
   "main": "dist/index.js",
   "files": [
     "dist"
