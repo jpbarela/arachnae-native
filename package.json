@@ -2,7 +2,7 @@
   "name": "@jpbarela/arachnae-native",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpbarela/arachnae.git"
+    "url": "git+https://github.com/jpbarela/arachnae-native.git"
   },
   "version": "0.1.0",
   "description": "Archane for React Native",
