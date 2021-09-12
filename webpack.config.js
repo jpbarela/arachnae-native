@@ -3,12 +3,13 @@ const path = require("path");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
     filename: "index.js",
+    globalObject: "this",
     library: {
-      name: "archnae-native",
+      name: "arachnae-native",
       type: "umd",
     },
+    path: path.resolve(__dirname, "dist"),
   },
   externals: {
     react: "react",
