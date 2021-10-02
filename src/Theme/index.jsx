@@ -2,7 +2,7 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
 import type {
-  TextStyleProp,
+  TextStyle,
   ViewStyleProp,
 } from "react-native/Libraries/StyleSheet/StyleSheet";
 import { definedNonEmptyString } from "../utils";
@@ -16,7 +16,7 @@ type ThemeProps = {
 type Theme = {
   backgroundColor: ViewStyleProp,
   borderColor: ViewStyleProp,
-  textBase: TextStyleProp,
+  textBase: TextStyle,
 };
 
 const textBase = (theme: ThemeProps) => ({
@@ -64,3 +64,5 @@ export function ThemeProvider({
     </ThemeContext.Provider>
   );
 }
+
+export const useTheme: () => Theme = () => React.useContext(ThemeContext);
